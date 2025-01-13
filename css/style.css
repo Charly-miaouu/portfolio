@@ -1,0 +1,254 @@
+/* Style global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    margin: 0.5em 0;
+    color: #222;
+}
+
+/* Section principale (top) */
+#top {
+    color: #0078D7;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement le contenu */
+}
+
+#top .top-container {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement le contenu */
+    align-items: center; /* Aligner verticalement la photo et le texte */
+    gap: 1.5rem; /* Espacement entre la photo et le texte */
+    max-width: 1200px; /* Largeur maximale de la section */
+    width: 100%; /* Prend toute la largeur disponible */
+}
+
+#top .profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #0078D7;
+}
+
+#top .text-container {
+    display: flex;
+    flex-direction: column; /* Empile les textes verticalement */
+    justify-content: center; /* Centre les textes verticalement */
+    text-align: left; /* Texte aligné à gauche */
+}
+
+#top h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+#top h2 {
+    margin: 0 0 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+
+/* Réseaux sociaux */
+#reseaux ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+#reseaux ul li {
+    margin: 0 0.5rem;
+}
+
+#reseaux ul li a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+#reseaux ul li a img:hover {
+    transform: scale(1.1);
+}
+
+/* Conteneur des blocs */
+.blocks-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+/* Blocs individuels */
+.blocks {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 35%; /* Chaque bloc occupe 60% de la largeur */
+    max-width: 800px; /* Limite la taille maximale pour éviter qu'ils soient trop grands */
+    min-width: 300px; /* Taille minimale */
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blocks:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.blocks h2 {
+    color: #0078D7;
+    margin-bottom: 1rem;
+}
+
+.blocks ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    line-height: 1.8;
+}
+
+/* Liens dans les blocs */
+.blocks a {
+    color: #0078D7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.blocks a:hover {
+    color: #0056A4;
+}
+
+/* Bouton télécharger le CV */
+.blocks a[target="_blank"] {
+    display: inline-block;
+    margin-top: 0rem;
+    padding: 0.5rem 1rem;
+    background-color: #0078D7;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.blocks a[target="_blank"]:hover {
+    background-color: #0056A4;
+}
+
+/* Masquer les checkboxes par défaut */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Styliser le label comme un bouton visuel */
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    cursor: default; /* Empêche le curseur clic */
+    user-select: none; /* Empêche la sélection de texte */
+}
+
+/* Style pour les cases décochées */
+input[type="checkbox"]:not(:checked) + .custom-checkbox {
+    background-color: #bbb;
+}
+
+/* Icône pour les cases cochées */
+input[type="checkbox"]:checked + .custom-checkbox::before {
+    content: "✔ ";
+    font-size: 1.4em;
+    margin-right: 8px;
+    color: #fff;
+}
+
+/* Icône pour les cases décochées */
+input[type="checkbox"]:not(:checked) + .custom-checkbox::before {
+    content: "✖ ";
+    font-size: 1.4em;
+    margin-right: 8px;
+    color: #fff;
+}
+
+
+.blocks ul li label {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.custom-checkbox {
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* Expériences */
+.experience-list {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-item {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.experience-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.experience-link {
+    color: #0078D7;
+    text-decoration: none;
+    margin-top: -5px;
+}
+
+/* Formulaire intégré */
+iframe {
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .blocks {
+        width: 900%; /* Une seule colonne */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #top .profile {
+        width: 100px;
+        height: 100px;
+    }
+
+    #reseaux ul li a img {
+        width: 30px;
+        height: 30px;
+    }
+}
