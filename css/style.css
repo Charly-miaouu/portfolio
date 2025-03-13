@@ -238,6 +238,47 @@ iframe {
     height: 400px;
 }
 
+/* Formulaire */
+.form-container {
+    width: 95%; /* Prend toute la largeur du bloc */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.form-container button {
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: auto;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container textarea {
+    resize: vertical;
+    height: 120px;
+}
+
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
